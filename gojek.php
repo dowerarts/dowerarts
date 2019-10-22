@@ -37,8 +37,7 @@ if($logins->success == true) {
 } else {
 	die("ERROR - Nomer belum kedaftar goblok / Tunggu 15 Menit");
 }
-		echo "Token Akun Utama : ";
-		$tokentf = trim(fgets(STDIN));
+
 		echo "Pin Akun Utama : ";
 		$pin = trim(fgets(STDIN));
 		echo "[+] Nomer Yang Ingin Di Claim : ";
@@ -94,7 +93,7 @@ $headertf[] = 'Content-Type: application/json';
 $headertf[] = 'X-AppVersion: 3.27.0';
 $headertf[] = "X-Uniqueid: ac94e5d0e7f3f".rand(111,999);
 $headertf[] = 'X-Location: -6.405821,106.64193';
-$headertf[] ='Authorization: Bearer '.$tokentf;
+$headertf[] ='Authorization: Bearer '.$token;
 $headertf[] = 'pin:'.$pin.'';
 
 $tf = curl('https://api.gojekapi.com/v2/fund/transfer', '{"amount":"1","description":"DowerGanteng ","qr_id":"'.$qrid.'"}', $headertf);
