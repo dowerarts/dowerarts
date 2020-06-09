@@ -18,7 +18,7 @@ $name = get_between($gas[1], '<p class="myinfo"><a href="/mypage/info"><span>', 
 if (strpos($gas[1], '<p class="myinfo"><a href="/mypage/info"><span>')) {
 	echo "[1] .++{ ID Ditemukan : $name }++.\n";
 } else {
-	echo "[1] .++{ ID Tidak Ditemukan : $username }++.\n"; die;
+	echo "[1] .++{ ID Tidak Ditemukan : $username }++.\n";
 }
 }
 
